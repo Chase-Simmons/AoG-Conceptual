@@ -113,6 +113,7 @@ races = {
       },
     },
   },
+  zamorak: {},
 };
 
 // monk: {
