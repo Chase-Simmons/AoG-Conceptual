@@ -2,13 +2,25 @@ const mainMenuItem = document.querySelectorAll('.mainMenuItem');
 const display = document.querySelector('.display');
 
 function mainMenuItemClick() {
-  console.log(`i have been clicked -> ${this.classList[1]}`);
-  display.classList.add('hideMM');
-  display.classList.add(`${this.classList[1]}`);
+  const selectedClass = this.classList[1];
+  console.log(`i have been clicked -> ${selectedClass}`);
+
+  display.classList.forEach((item) => {
+    if (
+      item !== selectedClass &&
+      item[0] + item[1] + item[2] + item[3] !== 'hide'
+    ) {
+      display.classList.add(`hide-${item}`);
+    }
+  });
+
+  display.classList.add(`${selectedClass}`);
+  display.classList.remove(`hide-${selectedClass}`);
 }
 
 function mainMenuItemRemoval() {
-  display.classList.remove('hideMM');
+  display.classList.remove('hide-mainMenu');
+
   console.log(display.classList);
 }
 

@@ -43,7 +43,7 @@ body {
   color: blue;
 }
 
-.hideMM {
+.hide-mainMenu {
   transition: 0.5s;
   /* transform: translateX(-200%); */
   opacity: 0;
