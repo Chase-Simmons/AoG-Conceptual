@@ -33,7 +33,7 @@ body {
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  transition: transform 0.5s;
+  transition: 0.5s;
 }
 
 .mainMenuItem {
@@ -44,6 +44,7 @@ body {
 }
 
 .hideMM {
-  transition: transform 0.5s;
-  transform: translateX(-200%);
+  transition: 0.5s;
+  /* transform: translateX(-200%); */
+  opacity: 0;
 }

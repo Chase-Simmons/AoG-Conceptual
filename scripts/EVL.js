@@ -8,7 +8,7 @@ function mainMenuItemClick() {
 }
 
 function mainMenuItemRemoval() {
-  // display.classList = 'display';
+  display.classList.remove('hideMM');
   console.log(display.classList);
 }
 
