@@ -33,6 +33,7 @@ body {
   justify-content: center;
   align-items: center;
   flex-direction: column;
+  transition: transform 0.5s;
 }
 
 .mainMenuItem {
@@ -40,4 +41,9 @@ body {
 }
 .mainMenuItem:hover {
   color: blue;
+}
+
+.hideMM {
+  transition: transform 0.5s;
+  transform: translateX(-200%);
 }
