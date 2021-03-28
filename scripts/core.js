@@ -1,12 +1,12 @@
-const terrian = {
+const terrain = {
   open: {
-    name: 'open',
+    name: 'Open',
     msMul: 1,
     exceptions: [],
     defBonusMul: 1,
   },
   track: {
-    name: 'track',
+    name: 'Track',
     msMul: 1.5,
     exceptions: [
       { class: 'Flying', msMul: 1 },
@@ -15,7 +15,7 @@ const terrian = {
     defBonusMul: 1,
   },
   bridge: {
-    name: 'bridge',
+    name: 'Bridge',
     msMul: 1.5,
     exceptions: [
       { class: 'Flying', msMul: 1 },
@@ -24,13 +24,13 @@ const terrian = {
     defBonusMul: 1,
   },
   structure: {
-    name: 'structure',
+    name: 'Structure',
     msMul: 1,
     exceptions: [],
     defBonusMul: 1.25,
   },
   swamp: {
-    name: 'swamp',
+    name: 'Swamp',
     msMul: 0.33,
     exceptions: [
       { class: 'Amphibious', msMul: 1 },
@@ -40,7 +40,7 @@ const terrian = {
     defBonusMul: 1.1,
   },
   river: {
-    name: 'river',
+    name: 'River',
     msMul: 0,
     exceptions: [
       { class: 'Scout', msMul: 0.33 },
@@ -52,7 +52,7 @@ const terrian = {
     defBonusMul: 1.1,
   },
   sea: {
-    name: 'sea',
+    name: 'Sea',
     msMul: 0,
     exceptions: [
       { class: 'Amphibious', msMul: 1 },
@@ -62,7 +62,7 @@ const terrian = {
     defBonusMul: 1,
   },
   forest: {
-    name: 'forest',
+    name: 'Forest',
     msMul: 0.5,
     exceptions: [
       { race: 'Guthix', msMul: 1 },
@@ -82,6 +82,28 @@ const terrian = {
   },
 };
 
+structures = {
+  village: {
+    name: 'Village',
+    strength: 10,
+    manaPT: 25,
+  },
+  portal: {
+    name: 'Portal',
+    strength: 10,
+    manaPT: 50,
+  },
+  tower: {
+    name: 'Tower',
+    strength: 15,
+    manaPT: 75,
+  },
+  temple: {
+    name: 'Temple',
+    strength: 15,
+    manaPT: 75,
+  },
+};
 races = {
   saradomin: {
     units: {
@@ -324,5 +346,9 @@ races = {
 //   description: '',
 // },
 
-console.log(terrian);
-console.log(races);
+const Core = {
+  terrain,
+  structures,
+  races,
+};
+console.log(Core);
