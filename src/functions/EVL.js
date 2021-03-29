@@ -31,7 +31,7 @@ class EVL extends Component {
     mainMenuItem.forEach((item) =>
       item.addEventListener('click', mainMenuItemClick)
     );
-    // display.addEventListener('transitionend', mainMenuItemRemoval);
+    display.addEventListener('transitionend', mainMenuItemRemoval);
     console.log(mainMenuItem); // CL DEBUGGER
     //
   };
