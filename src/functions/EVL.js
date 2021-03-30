@@ -16,25 +16,10 @@ class EVL extends Component {
 
     function mainMenuItemClick() {
       const selectedClass = this.classList[1];
-      const hideArray = [];
-      let filterItem;
+
       console.log(`i have been clicked -> ${selectedClass}`);
 
-      display.forEach((item) => {
-        if (
-          item !== selectedClass &&
-          item[0] + item[1] + item[2] + item[3] !== 'hide'
-        ) {
-          hideArray.push(`hide-${item}`);
-        } else {
-          filterItem = `${item}`;
-        }
-      });
-
-      dispatcher('SET_DISPLAY', [
-        ...display.filter((item) => item !== filterItem),
-        ...hideArray.filter((item) => item !== filterItem),
-      ]);
+      dispatcher('SET_DISPLAY', selectedClass);
     }
 
     function mainMenuItemRemoval() {

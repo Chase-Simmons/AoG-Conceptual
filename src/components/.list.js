@@ -1,4 +1,6 @@
 import MainMenu from './MainMenu';
-const components = { MainMenu };
+import Multiplayer from './Multiplayer';
+
+const components = { MainMenu, Multiplayer };
 
 export default components;

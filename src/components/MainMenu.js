@@ -1,9 +1,5 @@
 import React, { Component } from 'react';
 
-import '../css/App.css';
-
-let mainMenuItem;
-
 class MainMenu extends Component {
   render() {
     return (

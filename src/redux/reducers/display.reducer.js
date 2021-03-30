@@ -1,7 +1,4 @@
-const displayReducer = (
-  state = ['display', 'mainMenu', 'Multiplayer', 'hide-Multiplayer'],
-  action
-) => {
+const displayReducer = (state = 'mainMenu', action) => {
   switch (action.type) {
     case 'SET_DISPLAY':
       console.log(action.payload);
