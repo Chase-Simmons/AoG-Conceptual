@@ -13,8 +13,24 @@ class AoG extends Component {
         case 'mainMenu':
           triggerTransition(className);
           return <Components.MainMenu />;
+        case 'Singleplayer':
+          return;
         case 'Multiplayer':
           return <Components.Multiplayer />;
+        case 'Tutorial':
+          return;
+        case 'CoatOfArms':
+          return;
+        case 'ArmySetup':
+          return;
+        case 'Options':
+          return;
+        case 'Instructions':
+          return;
+        case 'Highscores':
+          return;
+        case 'Achievements':
+          return;
         default:
           return <Components.MainMenu />;
       }
