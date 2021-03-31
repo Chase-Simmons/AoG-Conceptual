@@ -6,12 +6,11 @@ import Functions from '../functions/.list.js';
 
 class AoG extends Component {
   render() {
-    let toDisplay = this.props.store.displayReducer;
+    let display = this.props.store.displayReducer;
 
     const whatToRender = (className) => {
       switch (className) {
         case 'mainMenu':
-          triggerTransition(className);
           return <Components.MainMenu />;
         case 'Singleplayer':
           return;
@@ -36,17 +35,12 @@ class AoG extends Component {
       }
     };
 
-    const triggerTransition = (className) => {
-      toDisplay = `hide-`;
-    };
-
-    console.log(toDisplay);
     return (
       <div className="page">
         <div className="gWin">
           <Functions.EVL />
-          <div className={`display ${toDisplay}`}>
-            {whatToRender(toDisplay)}
+          <div className={`display ${display}`}>
+            {whatToRender(display)}
             <script src="../functions/EVL.js" />
           </div>
         </div>

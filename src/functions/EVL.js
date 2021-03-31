@@ -13,24 +13,24 @@ class EVL extends Component {
     display = this.props.store.displayReducer;
 
     const mainMenuItem = document.querySelectorAll('.mainMenuItem');
+    const displayContainer = document.querySelector('.display');
 
     function mainMenuItemClick() {
       const selectedClass = this.classList[1];
 
       console.log(`i have been clicked -> ${selectedClass}`);
 
-      dispatcher('SET_DISPLAY', selectedClass);
-    }
+      displayContainer.classList.add('hide');
 
-    function mainMenuItemRemoval() {
-      // displayArray.remove('hide-mainMenu');
-      // console.log(displayArray);
+      displayContainer.addEventListener('transitionend', () => {
+        dispatcher('SET_DISPLAY', selectedClass);
+        displayContainer.classList.remove('hide');
+      });
     }
 
     mainMenuItem.forEach((item) =>
       item.addEventListener('click', mainMenuItemClick)
     );
-    // display.addEventListener('transitionend', mainMenuItemRemoval);
 
     // console.log(mainMenuItem); // CL DEBUGGER
     //

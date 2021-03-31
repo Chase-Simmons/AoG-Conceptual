@@ -5,7 +5,7 @@ class Multiplayer extends Component {
     return (
       <>
         <div
-          className=""
+          className="test"
           style={{ backgroundColor: 'black', height: '100%', width: '100%' }}
         ></div>
       </>
