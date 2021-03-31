@@ -6,8 +6,17 @@ class Multiplayer extends Component {
       <>
         <div
           className="test"
-          style={{ backgroundColor: 'black', height: '100%', width: '100%' }}
-        ></div>
+          style={{
+            backgroundColor: 'black',
+            height: '100%',
+            width: '100%',
+            borderRadius: '5px',
+          }}
+        >
+          <div style={{ color: 'white' }}>
+            <p>TEST</p>
+          </div>
+        </div>
       </>
     );
   }
