@@ -13,23 +13,23 @@ class AoG extends Component {
         case 'mainMenu':
           return <Components.MainMenu />;
         case 'Singleplayer':
-          return;
+          return <Components.MainMenu />;
         case 'Multiplayer':
           return <Components.Multiplayer />;
         case 'Tutorial':
-          return;
+          return <Components.MainMenu />;
         case 'CoatOfArms':
-          return;
+          return <Components.MainMenu />;
         case 'ArmySetup':
-          return;
+          return <Components.MainMenu />;
         case 'Options':
-          return;
+          return <Components.MainMenu />;
         case 'Instructions':
-          return;
+          return <Components.MainMenu />;
         case 'Highscores':
-          return;
+          return <Components.MainMenu />;
         case 'Achievements':
-          return;
+          return <Components.MainMenu />;
         default:
           return <Components.MainMenu />;
       }
